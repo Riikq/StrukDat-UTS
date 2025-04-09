@@ -1,8 +1,8 @@
 # StrukDat-UTS
 
 Anggota Kelompok:
-Louisy Novina P.
-M. Rizal Nurfuadi
-Salsabila Rahma R
-Tariq Ahmad
-Vasya Thabarani
+1. Louisy Novina P.
+2. M. Rizal Nurfuadi
+3. Salsabila Rahma R
+4. Tariq Ahmad
+5. Vasya Thabarani
