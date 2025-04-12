@@ -6,3 +6,5 @@ Anggota Kelompok:
 3. Salsabila Rahma R
 4. Tariq Ahmad
 5. Vasya Thabarani
+
+Sistem analisa DNA.
