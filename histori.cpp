@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "histori.h"
 using namespace std;
 
 struct Node {

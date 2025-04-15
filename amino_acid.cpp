@@ -2,6 +2,7 @@
 #include <vector>
 #include <unordered_map>
 #include <string>
+#include "amino_acid.h"
 using namespace std;
 
 // Struct untuk satu triplet DNA
