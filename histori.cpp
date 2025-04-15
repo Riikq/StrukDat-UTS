@@ -40,6 +40,18 @@ string rantaiKeString(Node* head) {
     return hasil;
 }
 
+void tampilkan_histori(const vector<string>& histori) {
+    cout << "\nHistori perubahan rantai:\n";
+    for (int i = 0; i < histori.size(); ++i) {
+        cout << "Versi " << i+1 << ": ";
+        for (int j = 0; j < histori[i].length(); ++j) {
+            cout << histori[i][j];
+            if (j != histori[i].length() - 1) cout << " -> ";
+        }
+        cout << endl;
+    }
+}
+
 void mutasi(Node*& head, int posisi, char nukleotidaBaru) {
     Node* temp = head;
     int indeks = 1;
@@ -74,7 +86,8 @@ int main() {
         cout << "1. Tampilkan rantai DNA\n";
         cout << "2. Mutasi DNA\n";
         cout << "3. Tampilkan histori perubahan\n";
-        cout << "4. Keluar\n";
+        cout << "4. Hapus histori perubahan\n";
+        cout << "5. Keluar\n";
         cout << "Pilih menu: ";
         cin >> pilihan;
 
@@ -91,21 +104,16 @@ int main() {
             mutasi(rantaiDNA, pos, baru);
             histori.push_back(rantaiKeString(rantaiDNA)); // Simpan ke histori
         } else if (pilihan == 3) {
-            cout << "\nHistori perubahan rantai:\n";
-            for (int i = 0; i < histori.size(); ++i) {
-                cout << "Versi " << i+1 << ": ";
-                for (int j = 0; j < histori[i].length(); ++j) {
-                    cout << histori[i][j];
-                    if (j != histori[i].length() - 1) cout << " -> ";
-                }
-                cout << endl;
-            }
+            tampilkan_histori(histori);
         } else if (pilihan == 4) {
+            histori.clear();
+            cout << "Histori berhasil dihapus.\n";
+        } else if (pilihan == 5) {
             cout << "Program selesai.\n";
         } else {
             cout << "Pilihan tidak valid.\n";
         }
-    } while (pilihan != 4);
+    } while (pilihan != 5);
 
     return 0;
 }
