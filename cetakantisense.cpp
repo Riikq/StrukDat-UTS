@@ -3,23 +3,24 @@
 using namespace std;
 
 // Struktur node untuk linked list
-struct Node {
+struct Node 
+{
     char data;
     Node* next;
 };
 
-// ========================
-// FUNGSI DASAR LINKED LIST
-// ========================
+// Fungsi Dasar Linked List
 
-Node* buatNode(char huruf) {
+Node* buatNode(char huruf) 
+{
     Node* baru = new Node;
     baru->data = huruf;
     baru->next = NULL;
     return baru;
 }
 
-void tampilkan(Node* mulai) {
+void tampilkan(Node* mulai) 
+{
     Node* sekarang = mulai;
     while (sekarang != NULL) {
         cout << sekarang->data;
@@ -30,11 +31,11 @@ void tampilkan(Node* mulai) {
     }
     cout << endl;
 }
-// =============================
-// FITUR: INPUT & MANIPULASI DNA
-// =============================
 
-void inputDNA(Node*& head, string dna) {
+// Input & Manipulasi DNA
+
+void inputDNA(Node*& head, string dna) 
+{
     head = NULL;
     Node* akhir = NULL;
 
@@ -50,11 +51,11 @@ void inputDNA(Node*& head, string dna) {
     }
 }
 
-// ======================================
-// FUNGSI BARU: Ubah Rantai ke Antisense
-// ======================================
 
-Node* ubahKeAntisense(Node* sense) {
+// Ubah Rantai ke Antisense
+
+Node* ubahKeAntisense(Node* sense) 
+{
     Node* antisense = NULL;
     Node* akhir = NULL;
     Node* sekarang = sense;
@@ -84,11 +85,10 @@ Node* ubahKeAntisense(Node* sense) {
     return antisense;
 }
 
-// ===================
-// PROGRAM UTAMA (MAIN)
-// ===================
+// Program Utama
 
-int main() {
+int main() 
+{
     Node* head = NULL;
     string input;
     cout << "Masukkan rantai DNA (contoh: ATCG): ";
