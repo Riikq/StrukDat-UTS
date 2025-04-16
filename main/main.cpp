@@ -42,7 +42,7 @@ Node* getAntisense(Node* head) {
 }
 
 void showMenu() {
-    std::cout << "\nMenu:\n";
+    std::cout << "\n==================== Menu ====================\n";
     std::cout << "1. Tampilkan rantai DNA\n";
     std::cout << "2. Ubah ke rantai antisense\n";
     std::cout << "3. Transkripsi ke mRNA\n";
@@ -50,7 +50,7 @@ void showMenu() {
     std::cout << "5. Menerjemahkan menjadi susunan asam amino\n";
     std::cout << "6. Tampilkan riwayat user\n";
     std::cout << "7. Keluar\n";
-    std::cout << "Pilihan: ";
+    std::cout << "\nPilihan: ";
 }
 
 int main() {
@@ -70,6 +70,7 @@ int main() {
 
     std::vector<std::string> history;
     int pilihan;
+    char lanjut;
 
     while (true) {
         showMenu();
@@ -120,10 +121,17 @@ int main() {
                 }
                 break;
             case 7:
-                std::cout << "Terima kasih telah menggunakan program ini.\n";
+                std::cout << "Keluar dari program.\n";
                 return 0;
             default:
                 std::cout << "Pilihan tidak valid. Silakan pilih ulang.\n";
+                continue;
+        }
+
+        std::cout << "\nKembali ke menu? (y/n): ";
+        std::cin >> lanjut;
+        if (lanjut != 'y' && lanjut != 'Y') {
+            break;
         }
     }
 
