@@ -91,6 +91,9 @@ int main() {
             }
             case 3: {
                 Node* rnaChain = transcribeToRNA(dnaChain);
+                Node* antisense = getAntisense(dnaChain);
+                std::cout << "Rantai AntiSense (digunakan untuk menerjemahkan ke mRNA): ";
+                printChain(antisense);
                 std::cout << "Rantai RNA: ";
                 printChain(rnaChain);
                 history.push_back("Transkripsi ke mRNA");
@@ -109,6 +112,11 @@ int main() {
             }
             case 5: {
                 Node* rnaChain = transcribeToRNA(dnaChain);
+                Node* antisense = getAntisense(dnaChain);
+                std::cout << "Rantai AntiSense (digunakan untuk menerjemahkan ke mRNA): ";
+                printChain(antisense);
+                std::cout << "Rantai RNA: ";
+                printChain(rnaChain);
                 std::cout << "Terjemahan triplet RNA ke asam amino:\n";
                 translateToAminoAcids(rnaChain);
                 history.push_back("Menerjemahkan menjadi susunan asam amino");
